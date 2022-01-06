@@ -19,5 +19,5 @@ backend "s3" {
     region = "us-east-2"
     access_key = "AKIAQDCLLPPTNQDJA2MZ"
     secret_key = "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"
-  }
+  
 }
