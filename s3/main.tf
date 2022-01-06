@@ -12,3 +12,12 @@ resource "aws_s3_bucket" "my-s3-bucket" {
   
   tags = var.tags
 }
+
+backend "s3" {
+    bucket = "my-s3-bucket" 
+    key    = "global/s3/terraform.tfstate"
+    region = "us-east-2"
+    access_key = "AKIAQDCLLPPTNQDJA2MZ"
+    secret_key = "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"
+  }
+}
