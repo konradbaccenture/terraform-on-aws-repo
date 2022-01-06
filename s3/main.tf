@@ -13,7 +13,7 @@ resource "aws_s3_bucket" "my-s3-bucket" {
   tags = var.tags
 }
 
-resource "aws_s3_bucket" "my-s3-bucket" {
+resource "aws_s3_bucket" "KMS_bucket" {
   bucket_prefix = "KMS_bucket"
   acl = var.acl
   
@@ -24,7 +24,7 @@ resource "aws_s3_bucket" "my-s3-bucket" {
   tags = var.tags
 }
 
-resource "aws_s3_bucket" "my-s3-bucket" {
+resource "aws_s3_bucket" "CMK_bucket" {
   bucket_prefix = "CMK_bucket"
   acl = var.acl
   
