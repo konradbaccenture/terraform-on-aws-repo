@@ -12,3 +12,25 @@ resource "aws_s3_bucket" "my-s3-bucket" {
   
   tags = var.tags
 }
+
+resource "aws_s3_bucket" "my-s3-bucket" {
+  bucket_prefix = "KMS_bucket"
+  acl = var.acl
+  
+   versioning {
+    enabled = var.versioning
+  }
+  
+  tags = var.tags
+}
+
+resource "aws_s3_bucket" "my-s3-bucket" {
+  bucket_prefix = "CMK_bucket"
+  acl = var.acl
+  
+   versioning {
+    enabled = var.versioning
+  }
+  
+  tags = var.tags
+}
