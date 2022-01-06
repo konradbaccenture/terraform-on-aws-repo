@@ -1,12 +1,12 @@
 variable "aws_region" {
   description = "The AWS region to use to create resources."
-  default     = "us-east-2"
+  default     = "us-east-1"
 }
 
 variable "bucket_prefix" {
     type        = string
     description = "(required since we are not using 'bucket') Creates a unique bucket name beginning with the specified prefix. Conflicts with bucket."
-    default     = "my-s3bucket-"
+    default     = "default-s3bucket-"
 }
 
 variable "tags" {
