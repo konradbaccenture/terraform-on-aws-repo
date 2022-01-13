@@ -2,6 +2,16 @@ provider "aws" {
   region = var.aws_region
 }
 
+#Lake Formation
+data "aws_s3_bucket" "example" {
+  bucket = "an-example-bucket"
+}
+
+resource "aws_lakeformation_resource" "example" {
+  arn = data.aws_s3_bucket.example.arn
+}
+
+#CMK Encrypted S3
 resource "aws_s3_bucket" "my-s3-bucket" {
   bucket_prefix = var.bucket_prefix
   acl = var.acl
