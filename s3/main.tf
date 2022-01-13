@@ -4,7 +4,7 @@ provider "aws" {
 
 #Lake Formation
 resource "aws_lakeformation_permissions" "example" {
-  principal   = aws_iam_role.workflow_role.arn
+  principal   = "arn:aws:iam::073510484680:role/s3_and_lake_formation"
   permissions = ["ALL"]
 
   data_location {
