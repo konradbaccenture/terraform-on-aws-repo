@@ -6,7 +6,8 @@ How to run
 2. Create EC2 Instance
 3. Create an S3 full access role
 4. Apply the above role to EC2
-5. Connect to instance
+5. Change CMK ARN in code
+6. Connect to instance
 
 #Install git
 #Perform a quick update on your instance:

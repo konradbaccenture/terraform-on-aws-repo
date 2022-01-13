@@ -3,12 +3,8 @@ provider "aws" {
 }
 
 #Lake Formation
-data "aws_s3_bucket" "example" {
-  bucket = "an-example-bucket"
-}
-
 resource "aws_lakeformation_resource" "example" {
-  arn = data.aws_s3_bucket.example.arn
+  arn = aws_s3_bucket.my-s3-bucket.arn
 }
 
 #CMK Encrypted S3
