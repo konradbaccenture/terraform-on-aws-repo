@@ -6,7 +6,7 @@ provider "aws" {
 
 resource "aws_lakeformation_data_lake_settings" "myLakeSettings" {
 
-  admins = [data.aws_iam_role.myRole.arn]
+  admins = ["arn:aws:iam::073510484680:role/s3_and_lake_formation"]
 
   create_database_default_permissions {
     permissions = ["ALL"]
