@@ -3,15 +3,6 @@ provider "aws" {
 }
 
 #Lake Formation
-resource "aws_lakeformation_permissions" "example" {
-  principal   = "arn:aws:iam::073510484680:role/s3_and_lake_formation"
-  permissions = ["ALL"]
-
-  data_location {
-    arn = aws_lakeformation_resource.example.arn
-  }
-}
-
 resource "aws_lakeformation_resource" "example" {
   arn = aws_s3_bucket.my-s3-bucket.arn
 }
