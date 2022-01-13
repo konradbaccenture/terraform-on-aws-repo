@@ -2,10 +2,6 @@ provider "aws" {
   region = var.aws_region
 }
 
-#Lake Formation
-resource "aws_lakeformation_resource" "example" {
-  arn = aws_s3_bucket.my-s3-bucket.arn
-}
 
 #CMK Encrypted S3
 resource "aws_s3_bucket" "my-s3-bucket" {
@@ -27,4 +23,9 @@ resource "aws_s3_bucket" "my-s3-bucket" {
   }
   
   tags = var.tags
+}
+
+#Lake Formation
+resource "aws_lakeformation_resource" "example" {
+  arn = aws_s3_bucket.my-s3-bucket.arn
 }
