@@ -3,22 +3,6 @@ provider "aws" {
 }
 
 #Lake Formation
-
-resource "aws_lakeformation_data_lake_settings" "myLakeSettings" {
-
-  admins = ["arn:aws:iam::073510484680:role/s3_and_lake_formation"]
-
-  create_database_default_permissions {
-    permissions = ["ALL"]
-    principal   = "IAM_ALLOWED_PRINCIPALS"
-  }
-
-  create_table_default_permissions {
-    permissions = ["ALL"]
-    principal   = "IAM_ALLOWED_PRINCIPALS"
-  }
-
-}
 resource "aws_lakeformation_resource" "example" {
   arn = aws_s3_bucket.my-s3-bucket.arn
 }
