@@ -3,10 +3,10 @@ Sample Terraform files to create S3 bucket in AWS
 
 How to run
 1. Create CMK
-2. Create EC2 Instance
-3. Create an S3 full access role
-4. Apply the above role to EC2
-5. Change CMK ARN in code
+2. Change CMK ARN in code
+3. Create an S3 and lake formation full access role
+4. Create EC2 Instance
+5. Apply the above role to EC2
 6. Connect to instance
 
 #Install git
